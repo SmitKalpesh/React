@@ -5,22 +5,25 @@ import './App.css'
 
 function App() {
  
-  const [data, setdata] = useState(0)
+  const [counter, setcounter] = useState(0)
 
-  const addValue =()=>{
-    setdata(data+1);
-
-  }
-
-  const removeValue =()=>{
-    setdata(data-1);
+  var addValue =()=>{
+    if(counter<20)
+    setcounter(counter+1);
 
   }
 
+  
+  var removeValue =()=>{
+    if(counter>0)
+    setcounter(counter-1);
+
+  }
+  
   return (
     <>
       <h1>Chai aur React</h1>
-      <h2>Counter Value: {data}</h2>
+      <h2>Counter Value: {counter}</h2>
       <button onClick={addValue}>Add Value</button><br></br>
       <button onClick={removeValue}>Remove Value</button>
     </>
